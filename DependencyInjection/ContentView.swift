@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel: MockViewModel = ViewModelResolver.resolve(\.viewModel)
+    @StateObject var viewModel: ViewModel = ViewModelResolver.resolve(\.viewModel)
     var body: some View {
         VStack {
             Text("Display mock user name from the viewModel below")

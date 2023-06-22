@@ -26,7 +26,7 @@
 		F187E2572A434327007BCFE0 /* InjectedValuesExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E2562A434327007BCFE0 /* InjectedValuesExt.swift */; };
 		F187E2592A434358007BCFE0 /* InjectedValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E2582A434358007BCFE0 /* InjectedValues.swift */; };
 		F187E25B2A4343B5007BCFE0 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E25A2A4343B5007BCFE0 /* Injected.swift */; };
-		F187E25F2A437BDE007BCFE0 /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E25E2A437BDE007BCFE0 /* MockViewModel.swift */; };
+		F187E25F2A437BDE007BCFE0 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E25E2A437BDE007BCFE0 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,7 +50,7 @@
 		F187E2562A434327007BCFE0 /* InjectedValuesExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValuesExt.swift; sourceTree = "<group>"; };
 		F187E2582A434358007BCFE0 /* InjectedValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectedValues.swift; sourceTree = "<group>"; };
 		F187E25A2A4343B5007BCFE0 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
-		F187E25E2A437BDE007BCFE0 /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
+		F187E25E2A437BDE007BCFE0 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +127,7 @@
 				F187E24A2A4340D8007BCFE0 /* EntityManager.swift */,
 				F1140C8D2A44DA3C000BC469 /* Repo.swift */,
 				F187E2422A433FCE007BCFE0 /* MockRepo.swift */,
-				F187E25E2A437BDE007BCFE0 /* MockViewModel.swift */,
+				F187E25E2A437BDE007BCFE0 /* ViewModel.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 			files = (
 				F1140C842A44D0B2000BC469 /* Photo.swift in Sources */,
 				F187E2472A43406A007BCFE0 /* Api.swift in Sources */,
-				F187E25F2A437BDE007BCFE0 /* MockViewModel.swift in Sources */,
+				F187E25F2A437BDE007BCFE0 /* ViewModel.swift in Sources */,
 				F187E2532A434244007BCFE0 /* InjectionKey.swift in Sources */,
 				F187E2492A4340AC007BCFE0 /* FirestoreObject.swift in Sources */,
 				F187E24B2A4340D8007BCFE0 /* EntityManager.swift in Sources */,

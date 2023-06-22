@@ -42,9 +42,9 @@ extension InjectedValues {
     
     //add provider key for each dependency
     private class ViewModelProviderKey: InjectionKey {
-        static var currentValue: MockViewModel = MockViewModel()
+        static var currentValue: ViewModel = ViewModel()
     }
-    var viewModel: MockViewModel {
+    var viewModel: ViewModel {
         get { ViewModelProviderKey.currentValue }
         set { ViewModelProviderKey.currentValue =  newValue }
     }

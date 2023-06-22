@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MockViewModel: ObservableObject {
+class ViewModel: ObservableObject {
     @Injected(\.repo) var repo: Repository
     @Published var user: User?
     
