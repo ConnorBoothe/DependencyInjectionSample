@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel: MockViewModel = ViewModelResolver.resolve(\.viewModel)
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Display mock user name from the viewModel below")
+            if let user = viewModel.user {
+                Text(user.name)
+            }
         }
         .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+        .onAppear {
+            Task {
+                await viewModel.getUser()
+                await viewModel.getPhoto()
+            }
+        }
     }
 }
