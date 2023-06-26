@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MockViewModel: ViewModelSvc, ObservableObject {
+class MockViewModel: ViewModelSvc {
     @Injected(\.repo) var repo: RepositorySvc
     @Published var user: User?
     var id = UUID()

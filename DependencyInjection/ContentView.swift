@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel = ViewModelResolver.resolve(\.viewModel)
-    @StateObject var mockViewModel = ViewModelResolver.resolve(\.mockViewModel)
+    //Concrete types must be instantiated to conform to ObservableObject
+    //When passing these dependencies down to child views, we can use ViewModelSvc
+    //and pass either of the below view models. I have done this in 'AnotherView'
+    @StateObject var viewModel: ViewModel = ViewModelResolver.resolve(\.viewModel)
+    @StateObject var mockViewModel: MockViewModel = ViewModelResolver.resolve(\.mockViewModel)
 
     @State var path = NavigationPath()
     var body: some View {
@@ -38,7 +41,7 @@ struct ContentView: View {
                     
                 case .another:
                     AnotherView(
-                        viewModel: viewModel  //viewModel
+                        viewModel: mockViewModel  //viewModel
                     )
                 }
             }
