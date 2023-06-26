@@ -11,6 +11,10 @@
 		F1140C842A44D0B2000BC469 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1140C832A44D0B2000BC469 /* Photo.swift */; };
 		F1140C8C2A44D9BE000BC469 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1140C8B2A44D9BE000BC469 /* Repository.swift */; };
 		F1140C8E2A44DA3C000BC469 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1140C8D2A44DA3C000BC469 /* Repo.swift */; };
+		F12853452A49C522006184CD /* ViewModelSvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12853442A49C522006184CD /* ViewModelSvc.swift */; };
+		F12853482A49CBAF006184CD /* ApiSvc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12853472A49CBAF006184CD /* ApiSvc.swift */; };
+		F128534A2A49D10E006184CD /* AnotherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12853492A49D10E006184CD /* AnotherView.swift */; };
+		F128534C2A49E057006184CD /* MockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F128534B2A49E057006184CD /* MockViewModel.swift */; };
 		F187E2342A433FB2007BCFE0 /* DependencyInjectionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E2332A433FB2007BCFE0 /* DependencyInjectionApp.swift */; };
 		F187E2362A433FB2007BCFE0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F187E2352A433FB2007BCFE0 /* ContentView.swift */; };
 		F187E2382A433FB4007BCFE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F187E2372A433FB4007BCFE0 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		F1140C832A44D0B2000BC469 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		F1140C8B2A44D9BE000BC469 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F1140C8D2A44DA3C000BC469 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		F12853442A49C522006184CD /* ViewModelSvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelSvc.swift; sourceTree = "<group>"; };
+		F12853472A49CBAF006184CD /* ApiSvc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiSvc.swift; sourceTree = "<group>"; };
+		F12853492A49D10E006184CD /* AnotherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotherView.swift; sourceTree = "<group>"; };
+		F128534B2A49E057006184CD /* MockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockViewModel.swift; sourceTree = "<group>"; };
 		F187E2302A433FB2007BCFE0 /* DependencyInjection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DependencyInjection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F187E2332A433FB2007BCFE0 /* DependencyInjectionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionApp.swift; sourceTree = "<group>"; };
 		F187E2352A433FB2007BCFE0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +97,7 @@
 				F187E2512A434234007BCFE0 /* DI */,
 				F187E2332A433FB2007BCFE0 /* DependencyInjectionApp.swift */,
 				F187E2352A433FB2007BCFE0 /* ContentView.swift */,
+				F12853492A49D10E006184CD /* AnotherView.swift */,
 				F187E2482A4340AC007BCFE0 /* FirestoreObject.swift */,
 				F187E24F2A43417C007BCFE0 /* User.swift */,
 				F1140C832A44D0B2000BC469 /* Photo.swift */,
@@ -127,7 +136,10 @@
 				F187E24A2A4340D8007BCFE0 /* EntityManager.swift */,
 				F1140C8D2A44DA3C000BC469 /* Repo.swift */,
 				F187E2422A433FCE007BCFE0 /* MockRepo.swift */,
+				F12853442A49C522006184CD /* ViewModelSvc.swift */,
 				F187E25E2A437BDE007BCFE0 /* ViewModel.swift */,
+				F128534B2A49E057006184CD /* MockViewModel.swift */,
+				F12853472A49CBAF006184CD /* ApiSvc.swift */,
 			);
 			path = Dependencies;
 			sourceTree = "<group>";
@@ -209,11 +221,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F128534C2A49E057006184CD /* MockViewModel.swift in Sources */,
 				F1140C842A44D0B2000BC469 /* Photo.swift in Sources */,
 				F187E2472A43406A007BCFE0 /* Api.swift in Sources */,
 				F187E25F2A437BDE007BCFE0 /* ViewModel.swift in Sources */,
 				F187E2532A434244007BCFE0 /* InjectionKey.swift in Sources */,
 				F187E2492A4340AC007BCFE0 /* FirestoreObject.swift in Sources */,
+				F128534A2A49D10E006184CD /* AnotherView.swift in Sources */,
+				F12853452A49C522006184CD /* ViewModelSvc.swift in Sources */,
 				F187E24B2A4340D8007BCFE0 /* EntityManager.swift in Sources */,
 				F187E2572A434327007BCFE0 /* InjectedValuesExt.swift in Sources */,
 				F187E2592A434358007BCFE0 /* InjectedValues.swift in Sources */,
@@ -223,6 +238,7 @@
 				F1140C8C2A44D9BE000BC469 /* Repository.swift in Sources */,
 				F187E2342A433FB2007BCFE0 /* DependencyInjectionApp.swift in Sources */,
 				F187E2502A43417C007BCFE0 /* User.swift in Sources */,
+				F12853482A49CBAF006184CD /* ApiSvc.swift in Sources */,
 				F187E25B2A4343B5007BCFE0 /* Injected.swift in Sources */,
 				F1140C822A44B8A3000BC469 /* ViewModelResolver.swift in Sources */,
 			);

@@ -10,11 +10,20 @@ import SwiftUI
 
 extension InjectedValues {
     //add provider key for each dependency
+    private class ApiProviderKey: InjectionKey {
+        static var currentValue: any ApiSvc = Api<User>()
+    }
+    
+    var apiSvc: any ApiSvc {
+        get { ApiProviderKey.currentValue }
+        set { ApiProviderKey.currentValue = newValue }
+    }
+    
     private class UserApiProviderKey: InjectionKey {
         static var currentValue: Api<User> = Api<User>()
     }
     
-    var userApi: Api<User>{
+    var userApi: Api<User> {
         get { UserApiProviderKey.currentValue }
         set { UserApiProviderKey.currentValue = newValue }
     }
@@ -32,10 +41,10 @@ extension InjectedValues {
     //add provider key for each dependency
     private class RepoProviderKey: InjectionKey {
         //Repo() can be swapped out with any class conforming to Repository
-        static var currentValue: Repository = Repo()
+        static var currentValue: RepositorySvc = MockRepo()
     }
     
-    var repo: Repository {
+    var repo: RepositorySvc {
         get { RepoProviderKey.currentValue }
         set { RepoProviderKey.currentValue = newValue }
     }
@@ -44,9 +53,22 @@ extension InjectedValues {
     private class ViewModelProviderKey: InjectionKey {
         static var currentValue: ViewModel = ViewModel()
     }
+    
     var viewModel: ViewModel {
         get { ViewModelProviderKey.currentValue }
-        set { ViewModelProviderKey.currentValue =  newValue }
+        set { ViewModelProviderKey.currentValue = newValue }
     }
+    
+    //add provider key for each dependency
+    private class MockViewModelProviderKey: InjectionKey {
+        static var currentValue: MockViewModel = MockViewModel()
+    }
+    
+    var mockViewModel: MockViewModel {
+        get { MockViewModelProviderKey.currentValue }
+        set { MockViewModelProviderKey.currentValue =  newValue }
+    }
+    
+    //need to be able to switch things out more easily
 
 }

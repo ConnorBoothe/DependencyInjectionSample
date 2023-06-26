@@ -1,19 +1,19 @@
 //
-//  UserViewModel.swift
+//  MockViewModel.swift
 //  DependencyInjection
 //
-//  Created by Connor Boothe on 6/21/23.
+//  Created by Connor Boothe on 6/26/23.
 //
 
 import Foundation
 
-class ViewModel: ViewModelSvc, ObservableObject {
+class MockViewModel: ViewModelSvc, ObservableObject {
     @Injected(\.repo) var repo: RepositorySvc
     @Published var user: User?
     var id = UUID()
     
     func getUser() async {
-        print("Get user real vm")
+        print("Get user mock vm")
         InjectedValues[\.repo] = MockRepo()
         let userQuery = await repo.queryUser()?.first
         print(userQuery?.name as Any)

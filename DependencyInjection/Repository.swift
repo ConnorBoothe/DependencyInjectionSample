@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol Repository {
+protocol RepositorySvc {
     func queryUser() async -> [User]?
     
     func queryPhoto() async -> [Photo]?

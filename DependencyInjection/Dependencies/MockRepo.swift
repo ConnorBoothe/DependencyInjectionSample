@@ -7,7 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
-class MockRepo: Repository {
+class MockRepo: RepositorySvc {
     @Injected(\.userApi) var userApi: Api<User>
     @Injected(\.photoApi) var photoApi: Api<Photo>
     

@@ -8,20 +8,47 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel: ViewModel = ViewModelResolver.resolve(\.viewModel)
+    @StateObject var viewModel = ViewModelResolver.resolve(\.viewModel)
+    @StateObject var mockViewModel = ViewModelResolver.resolve(\.mockViewModel)
+
+    @State var path = NavigationPath()
     var body: some View {
-        VStack {
-            Text("Display mock user name from the viewModel below")
-            if let user = viewModel.user {
-                Text(user.name)
+        NavigationStack(path: $path) {
+            VStack {
+                Text("Display mock user name from the viewModel below")
+                if let user = viewModel.user {
+                    Text(user.name)
+                }
+                Button(action: {
+                    path.append(StandardView.another)
+                }){
+                    Text("Go to another view")
+                }
+            }
+            .padding()
+            .onAppear {
+                Task {
+                    await viewModel.getUser()
+                    await viewModel.getPhoto()
+                }
+            }.navigationDestination(for: StandardView.self){ viewType in
+                switch(viewType){
+                case .home:
+                    Text("Home")
+                    
+                case .another:
+                    AnotherView(
+                        viewModel: viewModel  //viewModel
+                    )
+                }
             }
         }
-        .padding()
-        .onAppear {
-            Task {
-                await viewModel.getUser()
-                await viewModel.getPhoto()
-            }
-        }
+        
     }
 }
+
+enum StandardView: Hashable {
+    case home
+    case another
+}
+

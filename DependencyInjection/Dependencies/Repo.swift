@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestore
 
-class Repo: Repository {
+class Repo: RepositorySvc {
     @Injected(\.userApi) var userApi: Api<User>
     @Injected(\.photoApi) var photoApi: Api<Photo>
     

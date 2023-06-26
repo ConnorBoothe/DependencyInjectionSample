@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseFirestore
 
-class Api<T: FirestoreObject>: ObservableObject {
+class Api<T: FirestoreObject>: ApiSvc {
     let db = Firestore.firestore()
     let entityManager = EntityManager<T>()
 
